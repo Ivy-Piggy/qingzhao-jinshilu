@@ -13,6 +13,9 @@
 </head>
 <body>
 
+  <!-- ✦ 阅读进度条 -->
+  <div id="progress-bar"><div id="progress-fill"></div></div>
+
   <!-- ✦ 加载动画 -->
   <div id="loader">
     <div class="loader-brush"></div>
@@ -43,6 +46,7 @@
   <!-- ✦ HERO -->
   <section id="hero">
     <div class="hero-bg"></div>
+    <canvas id="ink-canvas"></canvas>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-subtitle" data-reveal>宋代女词人 · 金石学家</div>
@@ -514,6 +518,87 @@
           </div>
         </div>
 
+        <!-- 南渡路线 -->
+        <div class="route-section" data-reveal>
+          <div class="route-header">
+            <span class="section-tag">路线</span>
+            <h3>靖康南渡 · 千里飘零</h3>
+            <p class="route-subtitle">1127 — 1129年，从汴京到金陵的逃亡之路</p>
+          </div>
+          <div class="route-map-container">
+            <svg class="route-svg" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(184,150,62,0.06)" stroke-width="0.5"/>
+                </pattern>
+                <filter id="routeGlow">
+                  <feGaussianBlur stdDeviation="2" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+                <linearGradient id="routeGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="var(--vermillion)"/>
+                  <stop offset="50%" stop-color="var(--gold)"/>
+                  <stop offset="100%" stop-color="var(--vermillion-dark)"/>
+                </linearGradient>
+              </defs>
+              <rect width="800" height="500" fill="url(#grid)"/>
+              <path d="M 100,80 Q 150,60 200,100 Q 300,150 350,80 Q 400,20 450,60" fill="none" stroke="rgba(58,64,80,0.2)" stroke-width="1" stroke-dasharray="4 4"/>
+              <path d="M 500,350 Q 550,320 600,360 Q 680,400 720,350" fill="none" stroke="rgba(58,64,80,0.15)" stroke-width="1" stroke-dasharray="4 4"/>
+              <path d="M 0,320 Q 200,300 400,310 Q 550,320 700,300 L 800,290" fill="none" stroke="rgba(106,112,144,0.2)" stroke-width="2" stroke-dasharray="6 4"/>
+              <text x="420" y="340" fill="rgba(106,112,144,0.3)" font-size="11" font-family="serif">长江</text>
+              <path class="route-path" d="M 200,80 L 350,120 L 420,180 L 480,250 L 500,280 L 520,300 L 500,350 L 480,380 L 520,420 L 620,450"
+                    fill="none" stroke="url(#routeGrad)" stroke-width="2.5" stroke-dasharray="8 4"
+                    stroke-linecap="round" filter="url(#routeGlow)" opacity="0.8">
+                <animate attributeName="stroke-dashoffset" from="0" to="-500" dur="6s" repeatCount="indefinite"/>
+              </path>
+              <path class="route-path-trail" d="M 200,80 L 350,120 L 420,180 L 480,250 L 500,280 L 520,300 L 500,350 L 480,380 L 520,420 L 620,450"
+                    fill="none" stroke="rgba(192,57,43,0.15)" stroke-width="6" stroke-linecap="round"/>
+              <g class="city-marker" style="--city-delay:0s">
+                <circle cx="200" cy="80" r="8" fill="var(--bg-card)" stroke="var(--gold)" stroke-width="2"/>
+                <circle cx="200" cy="80" r="3" fill="var(--gold)"/>
+                <text x="195" y="58" fill="var(--gold-light)" font-size="13" font-family="serif" font-weight="600">汴京</text>
+                <text x="195" y="105" fill="var(--text-dim)" font-size="10" font-family="sans-serif">开封 · 1127年沦陷</text>
+              </g>
+              <g class="city-marker" style="--city-delay:0.5s">
+                <circle cx="420" cy="180" r="6" fill="var(--bg-card)" stroke="var(--vermillion)" stroke-width="1.5"/>
+                <circle cx="420" cy="180" r="2.5" fill="var(--vermillion)"/>
+                <text x="430" y="175" fill="var(--text-secondary)" font-size="11" font-family="serif">青州</text>
+                <text x="430" y="198" fill="var(--text-dim)" font-size="9" font-family="sans-serif">归来堂</text>
+              </g>
+              <g class="city-marker" style="--city-delay:1s">
+                <circle cx="520" cy="300" r="7" fill="var(--bg-card)" stroke="var(--ink-light)" stroke-width="1.5"/>
+                <circle cx="520" cy="300" r="2.5" fill="var(--ink-light)"/>
+                <text x="530" y="295" fill="var(--text-secondary)" font-size="11" font-family="serif">江宁</text>
+                <text x="530" y="318" fill="var(--text-dim)" font-size="9" font-family="sans-serif">金陵 · 建康</text>
+              </g>
+              <g class="city-marker" style="--city-delay:1.5s">
+                <circle cx="500" cy="350" r="5" fill="var(--bg-card)" stroke="var(--ink-blue)" stroke-width="1.5"/>
+                <circle cx="500" cy="350" r="2" fill="var(--ink-blue)"/>
+                <text x="455" y="372" fill="var(--text-dim)" font-size="10" font-family="serif">当涂</text>
+              </g>
+              <g class="city-marker" style="--city-delay:2s">
+                <circle cx="620" cy="450" r="7" fill="var(--bg-card)" stroke="var(--gold)" stroke-width="1.5"/>
+                <circle cx="620" cy="450" r="2.5" fill="var(--gold)"/>
+                <text x="630" y="445" fill="var(--gold-light)" font-size="12" font-family="serif" font-weight="600">临安</text>
+                <text x="630" y="468" fill="var(--text-dim)" font-size="9" font-family="sans-serif">杭州 · 终老地</text>
+              </g>
+              <g class="event-badge" style="--badge-delay:1.2s; --badge-x:525; --badge-y:285">
+                <rect x="540" y="270" width="130" height="24" rx="4" fill="rgba(192,57,43,0.15)" stroke="rgba(192,57,43,0.3)" stroke-width="0.5"/>
+                <text x="548" y="286" fill="var(--vermillion)" font-size="10" font-family="sans-serif">赵明诚病逝 · 1129</text>
+              </g>
+              <g class="event-badge" style="--badge-delay:1.8s; --badge-x:400; --badge-y:295">
+                <rect x="410" y="290" width="70" height="20" rx="4" fill="rgba(184,150,62,0.12)" stroke="rgba(184,150,62,0.25)" stroke-width="0.5"/>
+                <text x="416" y="303" fill="var(--gold)" font-size="9" font-family="sans-serif">藏书散失</text>
+              </g>
+            </svg>
+          </div>
+          <div class="route-legend">
+            <span class="route-legend-item"><span class="legend-dot" style="background:var(--vermillion)"></span>南渡路线</span>
+            <span class="route-legend-item"><span class="legend-dot" style="background:var(--gold)"></span>重要城市</span>
+            <span class="route-legend-item"><span class="legend-dash"></span>长江</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -963,6 +1048,27 @@
 
     </div>
   </section>
+
+  <!-- ✦ 诗词阅读模态框 -->
+  <div id="poem-modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="关闭">✕</button>
+      <div class="modal-inner">
+        <div class="modal-phase"></div>
+        <h3 class="modal-title"></h3>
+        <div class="modal-body"></div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✦ 返回顶部 -->
+  <button id="back-to-top" aria-label="返回顶部">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <path d="M10 16V4M10 4L4 10M10 4L16 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
 
   <!-- ✦ 关于 -->
   <section id="about">
