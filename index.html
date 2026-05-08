@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>李清照 · 金陵《金石录》</title>
+  <meta name="description" content="易安居士李清照与金陵金石录的不解之缘 — 从金石录后序到南渡词篇，一位乱世才女的生命印记">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📜</text></svg>">
+</head>
+<body>
+
+  <!-- ✦ 加载动画 -->
+  <div id="loader">
+    <div class="loader-brush"></div>
+    <p class="loader-text">墨痕犹在</p>
+  </div>
+
+  <!-- ✦ 导航 -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">易<span class="nav-logo-sub">安</span></a>
+      <div class="nav-links">
+        <a href="#intro" class="nav-link">序言</a>
+        <a href="#life" class="nav-link">生平</a>
+        <a href="#poetry" class="nav-link">词作</a>
+        <a href="#jinshilu" class="nav-link">金石录</a>
+        <a href="#jinling" class="nav-link">金陵</a>
+        <a href="#about" class="nav-link">关于</a>
+      </div>
+      <button class="nav-toggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ✦ HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-subtitle" data-reveal>宋代女词人 · 金石学家</div>
+      <h1 class="hero-title" data-reveal>
+        <span class="hero-char" style="--i:0">李</span>
+        <span class="hero-char" style="--i:1">清</span>
+        <span class="hero-char" style="--i:2">照</span>
+        <span class="hero-accent">·</span>
+        <span class="hero-char" style="--i:3">金</span>
+        <span class="hero-char" style="--i:4">石</span>
+        <span class="hero-char" style="--i:5">录</span>
+      </h1>
+      <p class="hero-desc" data-reveal>易安已去 · 墨韵犹存<br>金陵旧梦 · 金石长歌</p>
+      <div class="hero-actions" data-reveal>
+        <a href="#intro" class="btn btn-primary">开启旅程</a>
+        <a href="#poetry" class="btn btn-outline">品读词章</a>
+      </div>
+      <div class="hero-scroll" data-reveal>
+        <span>向下探索</span>
+        <div class="scroll-arrow">↓</div>
+      </div>
+    </div>
+    <div class="hero-particles" id="hero-particles"></div>
+  </section>
+
+  <!-- ✦ 序言 -->
+  <section id="intro">
+    <div class="section-inner">
+      <div class="intro-grid">
+        <div class="intro-text" data-reveal>
+          <span class="section-tag">序言</span>
+          <h2>乱世才女</h2>
+          <div class="divider divider-left"></div>
+          <p class="intro-body">
+            她是婉约词宗的绝代才女，也是金石学史上唯一的女学者。<strong>李清照</strong>（1084–1155），号易安居士，以惊世才情照亮了两宋之交的黯淡天空。
+          </p>
+          <p class="intro-body">
+            前半生，她是太学生之妻，与赵明诚携手搜罗天下金石古器，共著《金石录》——一部开创性的金石学巨著。后半生，靖康之变骤起，南渡流离，在<em>金陵</em>（今南京）经历了人生最惨痛的转折：国破、家亡、夫逝、书散。
+          </p>
+          <p class="intro-body">
+            她在金陵写下的《金石录后序》，以血泪之笔追忆三四十年的聚散离合，将个人命运与家国兴衰熔铸一炉，成为中国散文史上不朽的名篇。
+          </p>
+          <div class="intro-quote">
+            <span class="quote-mark">「</span>
+            <p>三十四年之间，忧患得失，何其多也！然有有必有无，有聚必有散，乃理之常。</p>
+            <span class="quote-attrib">——《金石录后序》</span>
+          </div>
+          <div class="intro-stat-row">
+            <div class="intro-stat">
+              <span class="stat-num">1084-1155</span>
+              <span class="stat-label">生卒年份</span>
+            </div>
+            <div class="intro-stat">
+              <span class="stat-num">70+</span>
+              <span class="stat-label">传世词作</span>
+            </div>
+            <div class="intro-stat">
+              <span class="stat-num">30卷</span>
+              <span class="stat-label">《金石录》</span>
+            </div>
+          </div>
+        </div>
+        <div class="intro-visual" data-reveal>
+          <div class="intro-visual-frame">
+            <div class="intro-portrait-placeholder">
+              <div class="portrait-icon">📜</div>
+              <div class="portrait-text">李清照<br>画像 · 清代改琦绘</div>
+            </div>
+          </div>
+          <p class="intro-caption">清 · 改琦《李清照小像》<br>图像来源 · 博物馆数字资源</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✦ 生平年表 -->
+  <section id="life">
+    <div class="section-inner">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">生平</span>
+        <h2>半生明媚半生愁</h2>
+        <div class="divider"></div>
+        <p>从汴京风华到金陵寒雨 —— 易安人生轨迹</p>
+      </div>
+
+      <div class="timeline-container">
+        <div class="timeline-track"></div>
+
+        <div class="timeline-era" data-reveal>
+          <div class="era-dot"></div>
+          <div class="era-card">
+            <div class="era-header">
+              <span class="era-year">1084 — 1101</span>
+              <span class="era-dynasty">少年</span>
+            </div>
+            <h3 class="era-title">汴京才女</h3>
+            <p class="era-desc">生于济南章丘（今山东济南）书香门第，父李格非为苏轼弟子。幼年聪慧，诗词惊动汴京文坛。</p>
+            <div class="era-highlight">
+              <span class="highlight-label">名篇</span>
+              <span class="highlight-text">《如梦令》「知否？知否？应是绿肥红瘦」</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-era" data-reveal>
+          <div class="era-dot"></div>
+          <div class="era-card">
+            <div class="era-header">
+              <span class="era-year">1101 — 1127</span>
+              <span class="era-dynasty">结缡</span>
+            </div>
+            <h3 class="era-title">金石之约</h3>
+            <p class="era-desc">18岁与太学生赵明诚结为伉俪。志趣相投，节衣缩食搜购金石碑帖，共同整理校勘，为《金石录》的编纂奠定基础。青州归来堂是其最幸福的岁月。</p>
+            <div class="era-highlight">
+              <span class="highlight-label">名篇</span>
+              <span class="highlight-text">《一剪梅》「此情无计可消除，才下眉头，却上心头」</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-era" data-reveal>
+          <div class="era-dot"></div>
+          <div class="era-card">
+            <div class="era-header">
+              <span class="era-year">1127 — 1129</span>
+              <span class="era-dynasty">南渡</span>
+            </div>
+            <h3 class="era-title">靖康之变</h3>
+            <p class="era-desc">金兵南下，汴京陷落。李清照携金石收藏辗转南逃。建炎三年（1129），赵明诚在赴湖州任途中病逝于建康（金陵）。清照悲痛欲绝，作词祭夫。</p>
+            <div class="era-highlight">
+              <span class="highlight-label">名篇</span>
+              <span class="highlight-text">《声声慢》「寻寻觅觅，冷冷清清，凄凄惨惨戚戚」</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-era" data-reveal>
+          <div class="era-dot"></div>
+          <div class="era-card">
+            <div class="era-header">
+              <span class="era-year">1129 — 1134</span>
+              <span class="era-dynasty">流寓</span>
+            </div>
+            <h3 class="era-title">金陵岁月</h3>
+            <p class="era-desc">寓居金陵（建康）期间，完成了《金石录后序》的撰写——追忆与赵明诚三十余载的收藏生涯，字字血泪。其后辗转越州、台州、衢州等地，金石藏书在战火中散失殆尽。</p>
+            <div class="era-highlight">
+              <span class="highlight-label">名篇</span>
+              <span class="highlight-text">《金石录后序》—— 中国散文史上的不朽名篇</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-era" data-reveal>
+          <div class="era-dot"></div>
+          <div class="era-card">
+            <div class="era-header">
+              <span class="era-year">1134 — 1155</span>
+              <span class="era-dynasty">暮年</span>
+            </div>
+            <h3 class="era-title">寂寞终老</h3>
+            <p class="era-desc">晚年定居临安（今杭州），整理赵明诚遗稿，完成《金石录》的刊行。孤苦伶仃中仍笔耕不辍，词风愈发深沉。约1155年悄然辞世，葬于何处已不可考。</p>
+            <div class="era-highlight">
+              <span class="highlight-label">名篇</span>
+              <span class="highlight-text">《永遇乐》「如今憔悴，风鬟霜鬓，怕见夜间出去」</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ✦ 词作 -->
+  <section id="poetry">
+    <div class="section-inner">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">词作</span>
+        <h2>自是花中第一流</h2>
+        <div class="divider"></div>
+        <p>易安词选 · 从少女天真到暮年苍凉</p>
+      </div>
+
+      <div class="poetry-grid">
+
+        <div class="poem-card" data-reveal>
+          <div class="poem-phase">早期</div>
+          <div class="poem-header">
+            <h3>如梦令</h3>
+            <span class="poem-note">约1100年 · 汴京</span>
+          </div>
+          <div class="poem-body">
+            <p>常记溪亭日暮，</p>
+            <p>沉醉不知归路。</p>
+            <p>兴尽晚回舟，</p>
+            <p>误入藕花深处。</p>
+            <p>争渡，争渡，</p>
+            <p>惊起一滩鸥鹭。</p>
+          </div>
+          <div class="poem-footer">
+            <span class="poem-tag">少女天真</span>
+            <span class="poem-tag">灵动自然</span>
+          </div>
+        </div>
+
+        <div class="poem-card" data-reveal>
+          <div class="poem-phase">早期</div>
+          <div class="poem-header">
+            <h3>一剪梅</h3>
+            <span class="poem-note">约1103年 · 婚后</span>
+          </div>
+          <div class="poem-body">
+            <p>红藕香残玉簟秋。</p>
+            <p>轻解罗裳，独上兰舟。</p>
+            <p>云中谁寄锦书来？</p>
+            <p>雁字回时，月满西楼。</p>
+            <p class="poem-blank"></p>
+            <p>花自飘零水自流。</p>
+            <p>一种相思，两处闲愁。</p>
+            <p>此情无计可消除，</p>
+            <p>才下眉头，却上心头。</p>
+          </div>
+          <div class="poem-footer">
+            <span class="poem-tag">相思之作</span>
+            <span class="poem-tag">千古绝唱</span>
+          </div>
+        </div>
+
+        <div class="poem-card" data-reveal>
+          <div class="poem-phase">中期</div>
+          <div class="poem-header">
+            <h3>醉花阴</h3>
+            <span class="poem-note">约1105年 · 重阳</span>
+          </div>
+          <div class="poem-body">
+            <p>薄雾浓云愁永昼，</p>
+            <p>瑞脑销金兽。</p>
+            <p>佳节又重阳，</p>
+            <p>玉枕纱厨，半夜凉初透。</p>
+            <p class="poem-blank"></p>
+            <p>东篱把酒黄昏后，</p>
+            <p>有暗香盈袖。</p>
+            <p>莫道不销魂，</p>
+            <p>帘卷西风，人比黄花瘦。</p>
+          </div>
+          <div class="poem-footer">
+            <span class="poem-tag">离愁别绪</span>
+            <span class="poem-tag">以花喻人</span>
+          </div>
+        </div>
+
+        <div class="poem-card" data-reveal>
+          <div class="poem-phase">南渡</div>
+          <div class="poem-header">
+            <h3>声声慢</h3>
+            <span class="poem-note">1129年 · 金陵</span>
+          </div>
+          <div class="poem-body">
+            <p>寻寻觅觅，冷冷清清，</p>
+            <p>凄凄惨惨戚戚。</p>
+            <p>乍暖还寒时候，最难将息。</p>
+            <p>三杯两盏淡酒，</p>
+            <p>怎敌他、晚来风急？</p>
+            <p>雁过也，正伤心，却是旧时相识。</p>
+            <p class="poem-blank"></p>
+            <p>满地黄花堆积。憔悴损，</p>
+            <p>如今有谁堪摘？</p>
+            <p>守着窗儿，独自怎生得黑？</p>
+            <p>梧桐更兼细雨，</p>
+            <p>到黄昏、点点滴滴。</p>
+            <p>这次第，怎一个愁字了得！</p>
+          </div>
+          <div class="poem-footer">
+            <span class="poem-tag">南渡名篇</span>
+            <span class="poem-tag">叠字绝唱</span>
+          </div>
+        </div>
+
+        <div class="poem-card" data-reveal>
+          <div class="poem-phase">南渡</div>
+          <div class="poem-header">
+            <h3>武陵春</h3>
+            <span class="poem-note">约1135年 · 金华</span>
+          </div>
+          <div class="poem-body">
+            <p>风住尘香花已尽，</p>
+            <p>日晚倦梳头。</p>
+            <p>物是人非事事休，</p>
+            <p>欲语泪先流。</p>
+            <p class="poem-blank"></p>
+            <p>闻说双溪春尚好，</p>
+            <p>也拟泛轻舟。</p>
+            <p>只恐双溪舴艋舟，</p>
+            <p>载不动许多愁。</p>
+          </div>
+          <div class="poem-footer">
+            <span class="poem-tag">暮年之叹</span>
+            <span class="poem-tag">愁重千钧</span>
+          </div>
+        </div>
+
+        <div class="poem-card" data-reveal>
+          <div class="poem-phase">南渡</div>
+          <div class="poem-header">
+            <h3>永遇乐</h3>
+            <span class="poem-note">约1140年 · 临安</span>
+          </div>
+          <div class="poem-body">
+            <p>落日熔金，暮云合璧，</p>
+            <p>人在何处。</p>
+            <p>染柳烟浓，吹梅笛怨，</p>
+            <p>春意知几许。</p>
+            <p>元宵佳节，融和天气，</p>
+            <p>次第岂无风雨。</p>
+            <p>来相召、香车宝马，</p>
+            <p>谢他酒朋诗侣。</p>
+          </div>
+          <div class="poem-footer">
+            <span class="poem-tag">感怀故国</span>
+            <span class="poem-tag">悲凉沉郁</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ✦ 金石录 -->
+  <section id="jinshilu">
+    <div class="section-inner">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">金石录</span>
+        <h2>物聚物散 · 乃理之常</h2>
+        <div class="divider"></div>
+        <p>一部金石学巨著背后的血泪悲欢</p>
+      </div>
+
+      <div class="jinshilu-intro" data-reveal>
+        <div class="jinshilu-text">
+          <p>《金石录》三十卷，赵明诚撰，李清照续成。著录上古三代至隋唐五代的金石器物、碑刻铭文共约2000种，是中国金石学史上继欧阳修《集古录》之后的又一座里程碑。</p>
+          <p>然而，这部学术巨著背后，是一位女性在战乱中以血肉之躯守护的承诺。</p>
+        </div>
+      </div>
+
+      <!-- 收藏历程 -->
+      <div class="jinshilu-timeline" data-reveal>
+        <div class="jinshilu-step">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>夫妇同好</h3>
+            <p>赵明诚与李清照新婚之际，二人即志趣相投。宁可「食去重肉，衣去重彩」，也要省下钱来购买金石碑帖、古玩字画。每得一书，即共同校勘、题签、整理。</p>
+          </div>
+        </div>
+
+        <div class="jinshilu-step">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>归来堂之乐</h3>
+            <p>在青州归来堂，他们把收藏整理得井然有序。每晚饭后，夫妇二人煮茶猜书：指着堆积的书卷，赌某事在某书某卷第几页第几行。胜者先饮茶，却常常大笑至茶洒怀中不得饮——「赌书消得泼茶香」，成为千古文坛佳话。</p>
+          </div>
+        </div>
+
+        <div class="jinshilu-step">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>南渡散失</h3>
+            <p>靖康二年（1127），金兵攻陷汴京。李清照南下时，将收藏「先去书之重大印本者，又去画之多幅者，又去古器之无款识者」——每一次选择都是一次撕心裂肺的取舍。辗转千里，十余屋藏书最终散失殆尽。</p>
+          </div>
+        </div>
+
+        <div class="jinshilu-step">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h3>后序之泪</h3>
+            <p>建炎三年（1129），赵明诚病逝于建康。李清照在悲痛中追忆往事，于绍兴二年（1132）写成《金石录后序》。这篇序文以三千余字记述了三十四年间收藏之乐与丧乱之苦，将个人命运与家国兴衰交织，被誉为「中国散文史上的第一等文字」。</p>
+          </div>
+        </div>
+
+        <div class="jinshilu-step">
+          <div class="step-number">05</div>
+          <div class="step-content">
+            <h3>刊行于世</h3>
+            <p>李清照暮年避居临安，在极为困苦的条件下，将赵明诚未完的《金石录》整理完毕并刊刻行世。这部巨著的问世，凝聚了她后半生全部的心血——「岂人性之所著，生死不能忘欤？」</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 后序节选 -->
+      <div class="jinshilu-excerpt" data-reveal>
+        <div class="excerpt-header">
+          <span class="section-tag">节选</span>
+          <h3>《金石录后序》</h3>
+        </div>
+        <div class="excerpt-body">
+          <div class="excerpt-verse">
+            <p>「右《金石录》三十卷者何？赵侯德父所著书也。取上自三代，下迄五季，钟、鼎、甗、鬲、盘、匜、尊、敦之款识，丰碑大碣、显人晦士之事迹，凡见于金石刻者二千卷……</p>
+            <p>……呜呼！自王播、元载之祸，书画与胡椒无异；长舆、元凯之病，钱癖与传癖何殊？名虽不同，其惑一也。</p>
+            <p>……然有有必有无，有聚必有散，乃理之常。人亡弓，人得之，又胡足道？所以区区记其终始者，亦欲为后世好古博雅者之戒云。」</p>
+          </div>
+        </div>
+        <div class="excerpt-attrib">
+          <p>—— 李清照 · 绍兴二年（1132）</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ✦ 金陵 -->
+  <section id="jinling">
+    <div class="section-inner">
+      <div class="section-header" data-reveal>
+        <span class="section-tag">金陵</span>
+        <h2>金陵旧梦</h2>
+        <div class="divider"></div>
+        <p>李清照与建康城的不解之缘</p>
+      </div>
+
+      <div class="jinling-content" data-reveal>
+        <div class="jinling-intro">
+          <p>金陵（今南京），古称建康、秣陵、石头城。宋代为江南东路治所，是长江下游最重要的城市之一。对李清照而言，金陵是她生命中最沉痛转折的发生地——</p>
+        </div>
+
+        <div class="jinling-map">
+          <div class="map-text">
+            <div class="map-item">
+              <div class="map-dot" style="--dot-color: var(--vermillion);"></div>
+              <div class="map-info">
+                <h4>赵明诚病逝</h4>
+                <p>建炎三年（1129）五月，赵明诚罢守江宁，赴湖州任。八月十八日，在建康病逝。李清照「悲泣不已」。</p>
+              </div>
+            </div>
+            <div class="map-item">
+              <div class="map-dot" style="--dot-color: var(--gold);"></div>
+              <div class="map-info">
+                <h4>金石录后序</h4>
+                <p>寓居金陵后，李清照提笔写下《金石录后序》，追忆「三十四年之间，忧患得失」。</p>
+              </div>
+            </div>
+            <div class="map-item">
+              <div class="map-dot" style="--dot-color: var(--gold);"></div>
+              <div class="map-info">
+                <h4>金陵词作</h4>
+                <p>《声声慢》《临江仙》等名篇均作于流寓金陵前后，金陵的风雨与愁绪深深地浸入词句之中。</p>
+              </div>
+            </div>
+            <div class="map-item">
+              <div class="map-dot" style="--dot-color: var(--vermillion);"></div>
+              <div class="map-info">
+                <h4>书散人去</h4>
+                <p>在金陵期间，李清照的藏书历经盗劫、兵火、散失。她以一己之力守护着与亡夫的约定。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="jinling-poem" data-reveal>
+          <div class="jinling-poem-bg"></div>
+          <div class="jinling-poem-content">
+            <h4>临江仙 · 庭院深深深几许</h4>
+            <div class="jinling-poem-verse">
+              <p>庭院深深深几许，</p>
+              <p>云窗雾阁春迟。</p>
+              <p>柳丝袅娜拂行舟，</p>
+              <p>归来未，著意过今春。</p>
+              <p class="poem-blank"></p>
+              <p>感月吟风多少事，</p>
+              <p>如今老去无成。</p>
+              <p>谁怜憔悴更凋零，</p>
+              <p>试灯无意思，踏雪没心情。</p>
+            </div>
+            <p class="jinling-poem-note">此词作于建康（金陵），是李清照南渡后词风转折的代表作。从「感月吟风」到「老去无成」，家国破碎之痛尽在其中。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ✦ 关于 -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-text" data-reveal>
+          <span class="section-tag">关于</span>
+          <h2>关于本项目</h2>
+          <div class="divider divider-left"></div>
+          <p><strong>「李清照 · 金陵《金石录》」</strong>是一个开放的数字人文项目，致力于呈现宋代女词人李清照的生平、词作及其与金陵、<em>《金石录》</em>的深厚渊源。</p>
+          <p>项目聚焦于靖康南渡这一历史转折背景下，一位女性学者如何在战乱中守护学术理想、在苦难中写下不朽篇章。</p>
+          <div class="about-features">
+            <div class="about-feature">
+              <span class="feature-icon">📚</span>
+              <div>
+                <h4>开放数据</h4>
+                <p>所有资料遵循开源协议，欢迎贡献</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="feature-icon">🎯</span>
+              <div>
+                <h4>学术导向</h4>
+                <p>基于可靠史料与学术研究成果整理</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="feature-icon">🤝</span>
+              <div>
+                <h4>持续建设</h4>
+                <p>内容与图像资料将持续更新完善</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-cta" data-reveal>
+          <div class="cta-card">
+            <h3>贡献指南</h3>
+            <p>如果你有更多资料、高清图像或改进建议，欢迎通过 GitHub 提交贡献。</p>
+            <a href="https://github.com/Ivy-Piggy/qingzhao-jinshilu" target="_blank" class="btn btn-primary">
+              GitHub 仓库 →
+            </a>
+            <div class="cta-refs">
+              <p><strong>参考资料：</strong></p>
+              <ul>
+                <li>李清照《李清照集校注》· 王仲闻校注</li>
+                <li>赵明诚《金石录》· 中华书局</li>
+                <li>脱脱等《宋史·李格非传》</li>
+                <li>陈祖美《李清照评传》</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✦ 页脚 -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">李清照 · 金陵《金石录》</span>
+        <p>易安居士 · 金石长歌 · 开放数字人文项目</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/Ivy-Piggy/qingzhao-jinshilu" target="_blank">GitHub</a>
+        <a href="#intro">序言</a>
+        <a href="#life">生平</a>
+        <a href="#poetry">词作</a>
+        <a href="#jinshilu">金石录</a>
+        <a href="#jinling">金陵</a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ivy-Piggy · 基于 MIT 协议开源</p>
+        <p class="footer-quote">「九万里风鹏正举，风休住，蓬舟吹取三山去」</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

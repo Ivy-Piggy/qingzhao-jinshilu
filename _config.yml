@@ -1,0 +1,14 @@
+# GitHub Pages configuration
+title: 李清照 · 金陵《金石录》
+description: 李清照与金陵金石录 · Li Qingzhao and Jinshi Lu in Jinling
+baseurl: "/qingzhao-jinshilu"
+url: "https://ivy-piggy.github.io"
+theme: null
+
+# Build settings
+markdown: kramdown
+exclude:
+  - scripts/
+  - references/
+  - Gemfile
+  - Gemfile.lock
