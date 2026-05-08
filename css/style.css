@@ -1716,6 +1716,200 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   margin-bottom: 0;
 }
 
+/* ✦ CREATIONS (动画 · 漫画 · 分镜 · 多格漫画) */
+#creations {
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+#creations::before {
+  content: ''; position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--vermillion), transparent);
+}
+
+.creation-intro {
+  max-width: 800px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.creation-intro p {
+  font-family: var(--font-cn);
+  font-size: 16px;
+  line-height: 2;
+  color: var(--text-secondary);
+}
+
+.creation-section {
+  max-width: 1000px;
+  margin: 0 auto 48px;
+}
+
+.creation-subtitle {
+  font-family: var(--font-cn);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.creation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.creation-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.creation-card:hover {
+  border-color: rgba(192,57,43,0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--glow-vermillion);
+}
+
+.creation-tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--vermillion);
+  letter-spacing: 0.1em;
+  padding: 2px 8px;
+  border: 1px solid var(--vermillion);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+.creation-card h4 {
+  font-family: var(--font-cn);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.creation-desc {
+  font-family: var(--font-cn);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.creation-link {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--gold);
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: auto;
+}
+
+.creation-link:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+}
+
+/* Creation note box */
+.creation-note-box {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 28px;
+  border: 1px solid var(--border);
+}
+
+.creation-note-box > p {
+  font-family: var(--font-cn);
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.creation-link-row {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.creation-link-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.creation-chip {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink-light);
+  padding: 2px 8px;
+  background: rgba(58,64,80,0.3);
+  border-radius: 4px;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+}
+
+.creation-link-row a {
+  font-family: var(--font-cn);
+  font-size: 14px;
+  color: var(--gold);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.creation-link-row a:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+}
+
+.creation-link-inline {
+  font-family: var(--font-cn);
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Creation footer note */
+.creation-footer-note {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  background: rgba(184,150,62,0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(184,150,62,0.12);
+}
+
+.creation-footer-note p {
+  font-family: var(--font-cn);
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.7;
+  margin-bottom: 4px;
+}
+
+.creation-footer-note p:last-child {
+  margin-bottom: 0;
+}
+
 /* ✦ ABOUT */
 #about {
   position: relative;
@@ -1963,6 +2157,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   .supplement-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .creation-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2066,6 +2264,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   .paper-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .creation-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2142,6 +2344,19 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
   .jinling-map .map-text {
     gap: 12px;
+  }
+
+  .creation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .creation-card {
+    padding: 18px;
+  }
+
+  .creation-link-row {
+    flex-direction: column;
+    gap: 4px;
   }
 }
 
